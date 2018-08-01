@@ -1,0 +1,13 @@
+header {
+    width: 100vw;
+    display: flex;
+    background-color: lightblue;
+}
+
+.nav_logo {
+    width: 200px;
+}
+
+.nav_icon {
+    width: 20px;
+}
