@@ -1,4 +1,9 @@
+.artist_preview {
+    display: flex;
+    justify-content: center;
+}
+
 .preview_vid {
+    height: 200px;
     width: 95vw;
-    margin: auto;
 }

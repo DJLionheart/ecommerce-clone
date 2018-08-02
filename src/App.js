@@ -24,6 +24,7 @@ class App extends Component {
           <Route path="/pages/biography" component={ Biography }/>
           <Route path="/pages/awards" component={ Awards }/>
           <Route path="/pages/media" component={ Media }/>
+          
         </div>
       </Router>
     );
