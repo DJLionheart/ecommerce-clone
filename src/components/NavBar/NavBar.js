@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
 
-import navLogo from '../../assets/media/nav/navLogo.svg';
-import search from '../../assets/media/nav/search.svg';
-import cart from '../../assets/media/nav/cart.svg';
-import menu from '../../assets/media/nav/menu.svg';
-import closeMenu from '../../assets/media/nav/closeMenu.svg';
-
 import './NavBar.css';
 
 class NavBar extends Component {

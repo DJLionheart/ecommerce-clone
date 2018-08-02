@@ -1,4 +1,6 @@
 header {
+    z-index: 2;
+    position: sticky;
     width: 100vw;
     display: flex;
     background-color: lightblue;
