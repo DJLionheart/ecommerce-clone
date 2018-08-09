@@ -1,9 +1,10 @@
 import React from 'react';
+import CollectionCover from '../../CollectionCover/CollectionCover';
 
 function CollSpotlight() {
     return(
         <div>
-            Collection Spotlight
+            <CollectionCover/>
         </div>
     )
 }
