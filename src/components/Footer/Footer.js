@@ -8,6 +8,7 @@ import explore from './explore';
 import sales from './sales';
 import customerService from './customerService';
 import legal from './legal';
+import SmallLogo from '../logos/SmallLogo/SmallLogo';
 
 
 
@@ -26,6 +27,9 @@ function Footer() {
                 <li>Twitter</li>
                 <li>YouTube</li>
             </ul>
+            <div className="footer_logo_container">
+                <SmallLogo/>
+            </div>
         </footer>
     )
 }
