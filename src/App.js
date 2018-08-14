@@ -9,6 +9,8 @@ import Gallery from './components/pages/Gallery/Gallery';
 import Biography from './components/pages/Biography/Biography';
 import Awards from './components/pages/Awards/Awards';
 import Media from './components/pages/Media/Media';
+import Contact from './components/pages/Contact/Contact'
+import ProductPage from './components/Shop/ProductPage/ProductPage';
 import Footer from './components/Footer/Footer';
 import './assets/styles/App.css';
 
@@ -25,6 +27,8 @@ class App extends Component {
           <Route path="/pages/biography" component={ Biography }/>
           <Route path="/pages/awards" component={ Awards }/>
           <Route path="/pages/media" component={ Media }/>
+          <Route path="/pages/contact-us" component={ Contact }/>
+          <Route path="/products/:productName" component={ ProductPage }/>
           <Footer/>
         </div>
       </Router>
