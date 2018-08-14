@@ -15,3 +15,5 @@ function ProductPage(props) {
         </main>
     )
 }
+
+export default ProductPage;
