@@ -3,9 +3,9 @@ import CollectionCover from '../../CollectionCover/CollectionCover';
 
 function CollSpotlight() {
     return(
-        <div>
+        <section>
             <CollectionCover/>
-        </div>
+        </section>
     )
 }
 
