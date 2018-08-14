@@ -1,0 +1,1 @@
+module.exports = "Due to the unique construction and artisanal materials used in the design of these books, we highly recommend your copy of Hawaii remain in its protective magnetic slipcase when not in use."
