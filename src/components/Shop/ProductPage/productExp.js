@@ -1,0 +1,7 @@
+module.exports = {
+    open: 'LIK Fine Art Open Edition landscape photographs are the perfect way to embrace Mother Nature when space is at a premium. Each captures a distinct aspect of the natural world and compliment other Open Editions with ease. All LIK Fine Art Open Editions are signed and un-numbered, measuring 29.5” by 29.5”. They can be used as accents with larger pieces, or placed in combinations that are visually captivating.',
+    
+    elementPack: 'All LIK Element Packs come to life on Fujiflex Crystal Archive Media, revealing vivid colors, sharp contours and unmatched contrast. Each image is protected between two layers of scratch-resistant acrylic, and backed by an integrated ½” thick white Komatex® PVC wall mount to ensure a safe, easy hanging experience while maintaining a modern gallery look. Custom, foam-lined packing, and convenient carrying handle enable smooth transportation and storage.',
+
+    elementFrame: 'Offer a masterful touch to any image in the Elements collection. Skillfully constructed onsite at Peter’s headquarters in Las Vegas, each individual frame is forged of the most refined artisan materials from around the world to ensure longevity and quality. The design’s interchangeable feature allows for collectors to switch out Elements as the seasons change or the mood strikes! Element frames come available with your choice of black or pearl hand-finished, bevel-cut linen liners.'
+}
