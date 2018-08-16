@@ -17,7 +17,7 @@ class RegProductHeader extends Component {
         return(
             <article className="reg_product_page_header">
                 <section className="product_img_container">
-                    <img src={ product.imgSrc } alt={ product.alt }/>
+                    <img src={ product.src } alt="product"/>
                 </section>
                 <section className="product_main_details">
                     <h1 className="product_main_title">{ product.title }</h1>

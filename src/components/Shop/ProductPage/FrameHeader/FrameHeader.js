@@ -19,7 +19,7 @@ class FrameHeader extends Component {
         return(
             <article className="frame_product_page_header">
                 <section className="product_img_container">
-                    <img src={ product.imgSrc } alt={ product.alt }/>
+                    <img src={ product.src } alt="element frame"/>
                 </section>
                 <section className="frame_product_main_details">
                     <h1 className="frame_product_main_title">{ product.title }</h1>

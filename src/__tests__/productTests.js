@@ -3,7 +3,13 @@ const fns = require('../utils/fns');
 const sampleData = require('../components/Shop/ProductPage/sampleProducts');
 
 test('getCurrentProduct should return an object', () => {
-    let productTest1 = fns.getCurrentProduct(sampleData, 'aviator-b-w')
+    let productTest1 = fns.getCurrentProduct(sampleData, 'aviator-b-w');
 
-    expect(productTest1).toBe(sampleData[3]);
+    expect(typeof productTest1).toBe('object');
+})
+
+test('getCurrentProduct should return the correct data', () => {
+    let dataTest = fns.getCurrentProduct(sampleData, 'aviator-b-w');
+
+    expect(dataTest).toBe(sampleData[3]);
 })

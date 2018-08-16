@@ -10,7 +10,7 @@ class RegProductHeader extends Component {
         return(
             <article className={ orientation ? orientation === "vertical" ? "product_vert_header" : "product_hor_header" : "product_standard_header"}>
                 <section className="product_img_container">
-                    <img src={ product.imgSrc } alt={ product.alt }/>
+                    <img src={ product.src } alt="limited edition product"/>
                 </section>
                 <section className="product_main_details">
                     <h1 className="product_main_title">{ product.title }</h1>

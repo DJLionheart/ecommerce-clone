@@ -1,0 +1,6 @@
+module.exports = {
+    'Library Collection': "Due to the unique construction and artisanal materials used in the design of these books, we highly recommend your copy of Hawaii remain in its protective magnetic slipcase when not in use.",
+    'Element Packs': 'All LIK Element Packs come to life on Fujiflex Crystal Archive Media, revealing vivid colors, sharp contours and unmatched contrast. Each image is protected between two layers of scratch-resistant acrylic, and backed by an integrated ½” thick white Komatex® PVC wall mount to ensure a safe, easy hanging experience while maintaining a modern gallery look. Custom, foam-lined packing, and convenient carrying handle enable smooth transportation and storage.',
+    'Element Frames': 'Offer a masterful touch to any image in the Elements collection. Skillfully constructed onsite at Peter’s headquarters in Las Vegas, each individual frame is forged of the most refined artisan materials from around the world to ensure longevity and quality. The design’s interchangeable feature allows for collectors to switch out Elements as the seasons change or the mood strikes! Element frames come available with your choice of black or pearl hand-finished, bevel-cut linen liners.'
+}
+

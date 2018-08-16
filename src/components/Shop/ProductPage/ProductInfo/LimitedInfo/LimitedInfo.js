@@ -5,7 +5,7 @@ function LimitedInfo(props) {
     return(
         <section>
             <h4 className="product_location">{ product.location }</h4>
-            <p className="product_info_p">{ product.info }</p>
+            <p className="product_info_p">{ product.desc }</p>
             <h3 className="limited_info">{ product.limitedInfo }</h3>
         </section>
     )

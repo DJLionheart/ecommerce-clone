@@ -9,7 +9,7 @@ import customerService from './customerService';
 import legal from './legal';
 import SmallLogo from '../logos/SmallLogo/SmallLogo';
 
-
+import './Footer.css';
 
 function Footer() {
     return(
