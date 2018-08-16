@@ -6,7 +6,7 @@ import RegProductHeader from './RegProductHeader/RegProductHeader';
 import products from './sampleProducts';
 
 function ProductPage(props) {
-    const { product } = this.props;
+    const { productName } = this.props.match.params;
     
     return(
         <main className="product_page">
