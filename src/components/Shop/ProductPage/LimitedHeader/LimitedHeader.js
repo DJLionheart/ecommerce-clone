@@ -2,19 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class RegProductHeader extends Component {
-    constructor() {
-        super();
-        this.state = {
-            vertical: false
-        }
-    }
 
     render() {
-        const { vertical } = this.state;
         const { product } = this.props;
+        const { orientation } = product;
         
         return(
-            <article className={ vertical ? "product_vert_header" : "product_hor_header" }>
+            <article className={ orientation ? orientation === "vertical" ? "product_vert_header" : "product_hor_header" : "product_standard_header"}>
                 <section className="product_img_container">
                     <img src={ product.imgSrc } alt={ product.alt }/>
                 </section>
@@ -23,7 +17,6 @@ class RegProductHeader extends Component {
                     <h4 className="product_main_collection">{ product.collection }</h4>
                     <h2><Link to="/pages/contact">Request a Quote</Link></h2>
                 </section>
-
             </article>
         )
     }

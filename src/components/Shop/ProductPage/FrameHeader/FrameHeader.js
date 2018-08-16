@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Button from '../../../buttons/Button/Button';
+
 class FrameHeader extends Component {
     constructor() {
         super();
@@ -44,6 +46,7 @@ class FrameHeader extends Component {
                         <option value="8">8</option>
                     </select>
 
+                    <Button type="add"/>
 
                 </section>
 

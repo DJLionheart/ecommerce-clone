@@ -7,7 +7,7 @@ function ProductSocial(props) {
     return(
         <section className="product_info">
             {
-                product.type === "limited" ? <LimitedInfo product={ product }/> : <RegInfo product={ product }/>
+                product.edition === "Limited Edition" ? <LimitedInfo product={ product }/> : <RegInfo product={ product }/>
             }
         </section>
     )

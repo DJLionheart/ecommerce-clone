@@ -13,9 +13,7 @@ function EotPreview() {
             <h3>Peter Lik</h3>
             <h1>Equation of Time</h1>
             <p>A book by definition only, this epic collection of world-class photography showcases Peter's most stunning visions from the world around us. This impressive 106-pound book is a virtual gallery in itself.</p>
-            <button variant="framed">
-                LEARN MORE
-            </button>
+            <Button variant="framed"/>
         </section>
     )
 }
