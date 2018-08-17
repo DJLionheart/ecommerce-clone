@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
+
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import './RegPreview.css';
 
 class RegPreview extends Component {
     constructor() {
@@ -17,22 +21,23 @@ class RegPreview extends Component {
     render() {
         const { product } = this.props;
         const { currentIndex } = this.state
+
+        const slides = product.previewGallery.map( (src, index) => {
+            return <Slide key={index} index={index}><section className="carousel_container"><img className="carousel_img" src={ src } alt="product preview"/></section></Slide>
+        })
+
         return(
             <article className="gallery_preview">
-                <section className="gallery_photo">
-                    <img src={ product.previewGallery[currentIndex]} alt="product preview"/>
-                </section>
-                <nav className="gallery_nav">
-                    <ul className="gallery_selector">
-                        <li value={0} onClick={ e => this.changePreviewIndex(e.target.value) }>/01</li>
-                        <li value={1} onClick={ e => this.changePreviewIndex(e.target.value) }>/02</li>
-                        <li value={2} onClick={ e => this.changePreviewIndex(e.target.value) }>/03</li>
-                        <li value={3} onClick={ e => this.changePreviewIndex(e.target.value) }>/04</li>
-                        <li value={4} onClick={ e => this.changePreviewIndex(e.target.value) }>/05</li>
-                        <li value={5} onClick={ e => this.changePreviewIndex(e.target.value) }>/06</li>
-                    </ul>
+                <CarouselProvider
+                    naturalSlideWidth={100}
+                    naturalSlideHeight={125}
+                    totalSlides={ product.previewGallery.length }
+                >
+                    <Slider>
+                        { slides }
+                    </Slider>
 
-                </nav>
+                </CarouselProvider>
             </article>
         )
     }
