@@ -74,5 +74,33 @@ module.exports = {
         desc: 'Step into a collection based on one of Peter Lik’s most favorite landscape regions in the world, and get lost in the same underground caverns and canyons that helped him earn top industry accolades.',
         img1: 'https://cdn.shopify.com/s/files/1/2486/4354/products/Peter-Lik-Sphinx-Cavern-Framed-Recess-Mount_900x.jpg',
         img2: 'https://cdn.shopify.com/s/files/1/2486/4354/products/Peter-Lik-Shine-Framed-Recess-Mount_900x.jpg'
-    }
+    },
+
+    'Trees': {
+        name: 'Trees',
+        desc: 'Some of Peter’s most beloved muses are the towering, ancient guardians of our planet. Showcasing Mother Nature’s masterful palette, each image is sure to bring emotion and appreciation to any viewer.',
+        img1: 'https://cdn.shopify.com/s/files/1/2486/4354/products/Peter-Lik-Dreamcatcher-Framed-Recess-Mount_900x.jpg',
+        img2: 'https://cdn.shopify.com/s/files/1/2486/4354/products/Peter-Lik-Enchantment-Framed-Recess-Mount_900x.jpg'
+    },
+
+    'Volcanoes': {
+        name: 'Volcanoes',
+        desc: 'Resulting from Peter Lik’s most precarious adventures to the Hawaiian Islands, these eye-widening images show the raw, unfathomable power of Earth’s raging core.',
+        img1: 'https://cdn.shopify.com/s/files/1/2486/4354/products/Peter-Lik-Revelation-Framed-Recess-Mount_900x.jpg',
+        img2: 'https://cdn.shopify.com/s/files/1/2486/4354/products/Peter-Lik-Peles-Whisper-Framed-Recess-Mount_900x.jpg'
+    },
+
+    'Water': {
+        name: 'Water',
+        desc: 'Drink in every detail. The source of all life is Master Photographer Peter Lik’s main inspiration behind this captivating series of waterfalls, rivers, lakes, oceans, and ponds.',
+        img1: 'https://cdn.shopify.com/s/files/1/2486/4354/products/Peter-Lik-Changing-Moods-Framed-Recess-Mount_900x.jpg',
+        img2: 'https://cdn.shopify.com/s/files/1/2486/4354/products/Peter-Lik-Peles-Whisper-Framed-Recess-Mount_900x.jpg'
+    },
+
+    'Wildlife': {
+        name: 'Wildlife',
+        desc: 'Graceful. Powerful. Mysterious. The legendary creatures of Europe and Africa make a groundbreaking appearance in this animated collection from Peter Lik.',
+        img1: 'https://cdn.shopify.com/s/files/1/2486/4354/products/Peter-Lik-Untamed-Framed-Recess-Mount_900x.jpg  ',
+        img2: 'https://cdn.shopify.com/s/files/1/2486/4354/products/Peter-Lik-Running-Free-Framed-Recess-Mount_900x.jpg'
+    },
 }

@@ -9,6 +9,8 @@ import CollSlider from './CollSlider/CollSlider';
 import CollSpotlight from './CollSpotlight/CollSpotlight';
 import BioPreview from './BioPreview/BioPreview';
 
+import { Architecture } from '../Shop/collections/collection_data';
+
 function Home() {
         return(
             <main>
@@ -16,7 +18,7 @@ function Home() {
                 <EotPreview/>
                 <ArtistPreview/>
                 <CollSlider/>
-                <CollSpotlight/>
+                <CollSpotlight collection={ Architecture }/>
                 <BioPreview/>
             </main>
         )
