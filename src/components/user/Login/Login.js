@@ -7,7 +7,9 @@ class Login extends Component {
         super();
         this.state = {
             email: '',
-            pass: ''
+            pass: '',
+            forgotten: false,
+            recoveryEmail: ''
         }
 
         this.handleUpdate = this.handleUpdate.bind(this);
