@@ -1,0 +1,13 @@
+.address_modal {
+    margin-top: 200px;
+    height: 500px;
+}
+
+.modal_hidden {
+    display: none;
+    
+}
+
+/* .address_field {
+    background-color: red;
+} */

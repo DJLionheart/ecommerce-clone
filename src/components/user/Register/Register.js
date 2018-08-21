@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button from '../../buttons/Button/Button';
 import BeneathForm from '../BeneathForm/BeneathForm';
 
-class CreateAcct extends Component {
+class Register extends Component {
     constructor() {
         super();
         this.state = {
@@ -43,4 +43,4 @@ class CreateAcct extends Component {
     }
 }
 
-export default CreateAcct;
+export default Register;

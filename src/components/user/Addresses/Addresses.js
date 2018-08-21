@@ -15,7 +15,9 @@ class Addresses extends Component {
         super();
         this.state = {
             defaultAddress: {},
-            addresses: []
+            addresses: [],
+            addAddress: false,
+            editAddress: false
         }
     }
 

@@ -3,7 +3,7 @@ header {
     position: fixed;
     width: 100vw;
     display: flex;
-    background-color: lightblue;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .nav_icon {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AddressModal from '../Addresses/AddressModal/AddressModal';
 
 
 class Account extends Component {
@@ -9,6 +10,14 @@ class Account extends Component {
             orders: [],
             address: []
         }
+    }
+
+    render() {
+        return(
+            <main className="account_page">
+                <h1>Account</h1>
+            </main>
+        )
     }
 }
 
