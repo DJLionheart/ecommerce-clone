@@ -14,7 +14,10 @@ class Wishlist extends Component {
         const { loaded, wishlist } = this.state;
         return(
             <main className="wishlist">
-                <h1>Wishlist</h1>
+                {
+                    loaded ? <h1>__User's__ Wishlist</h1> : <h1>Wishlist</h1>
+                }
+            
                 {
                     !loaded ? <p className="wishlist_dialog">Please wait while you are redirected...</p> : null
                 }
