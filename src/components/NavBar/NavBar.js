@@ -1,20 +1,54 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import './NavBar.css';
 import FullLogo from '../logos/FullLogo/FullLogo';
+import Popup from './Popup/Popup';
 
 class NavBar extends Component {
+    constructor() {
+        super();
+        this.state = {
+            popupOpen: false,
+            popupContents: ''
+        }
+
+        this.openPopup = this.openPopup.bind(this);
+        this.closePopup = this.closePopup.bind(this);
+        this.setPopup = this.setPopup.bind(this);
+    } 
+
+    openPopup() {
+        this.setState({
+            popupOpen: true
+        })
+    }
+
+    closePopup() {
+        this.setState({
+            popupOpen: false
+        })
+    }
+
+    setPopup(evt) {
+        this.setState({
+            popupContents: evt.target.value
+        })
+    }
+
     render() {
+        const { popupOpen, popupContents } = this.state;
+
         return(
             <header>
                 <div className="logo_container">
-                    <FullLogo/>
+                    <Link to="/"><FullLogo/></Link>
                 </div>
-                <ul>
-                    <li className="nav_li">THE WORK</li>
-                    <li className="nav_li">THE GALLERIES</li>
-                    <li className="nav_li">THE ARTIST</li>
-                    <li className="nav_li">SHOP</li>
+                <ul onClick={ this.openPopup }>
+                    <li className="nav_li" value="work" onClick={ e => this.setPopup(e) }>THE WORK</li>
+                    <li className="nav_li" value="galleries" onClick={ e => this.setPopup(e) }>THE GALLERIES</li>
+                    <li className="nav_li" value="artist" onClick={ e => this.setPopup(e) }>THE ARTIST</li>
+                    <li className="nav_li" value="shop" onClick={ e => this.setPopup(e) }>SHOP</li>
                 </ul>
                 <ul className="nav_btns">
                     <li className="nav_icon">
@@ -43,7 +77,7 @@ class NavBar extends Component {
                         </svg>
                     </li> 
                 </ul>
-
+                { popupOpen ? <Popup nav={ popupContents }/> : null}
             </header>
         )
     }

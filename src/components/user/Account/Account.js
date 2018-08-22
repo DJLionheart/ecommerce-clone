@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import AddressModal from '../Addresses/AddressModal/AddressModal';
 
-
 class Account extends Component {
     constructor() {
         super();

@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
+import popupData from './popupData';
 
 function Popup(props) {
     const { nav } = props;
@@ -9,11 +12,7 @@ function Popup(props) {
         )
     })
 
-    const artistLinks = [
-        {order: '/01', title: 'Biography', path: '/pages/biography'},
-        {order: '/02', title: 'Awards', path: '/pages/awards'},
-        {order: '/03', title: 'Media', path: '/pages/media'},
-    ].map( artistLink => {
+    const artistLinks = popupData['artist'].map( artistLink => {
         return <li className="artist_link" key={ artistLink.path }> <span className="order_number large">{artistLink.order}</span>{ artistLink.title }</li>
     })
 
@@ -46,3 +45,5 @@ function Popup(props) {
         </aside>
     )
 }
+
+export default Popup;
