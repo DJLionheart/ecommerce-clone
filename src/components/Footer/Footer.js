@@ -1,13 +1,14 @@
 import React from 'react';
 
 import LinkList from './LinkList/LinkList';
-import galleries from './gallerylist';
-import aboutUs from './aboutUs';
-import explore from './explore';
-import sales from './sales';
-import customerService from './customerService';
-import legal from './legal';
 import SmallLogo from '../logos/SmallLogo/SmallLogo';
+
+import galleries from '../../assets/data/gallerylist';
+import aboutUs from '../../assets/data/footer-links/aboutUs';
+import explore from '../../assets/data/footer-links/explore';
+import sales from '../../assets/data/footer-links/sales';
+import customerService from '../../assets/data/footer-links/customerService';
+import legal from '../../assets/data/footer-links/legal';
 
 import './Footer.css';
 

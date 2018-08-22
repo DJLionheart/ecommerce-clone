@@ -1,0 +1,6 @@
+.navbar_popup {
+    top: 80px;
+    position: fixed;
+    background-color: magenta;
+    width: 100vw;
+}
