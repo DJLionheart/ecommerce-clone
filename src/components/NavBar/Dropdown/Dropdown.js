@@ -3,49 +3,49 @@ import { Link } from 'react-router-dom';
 
 import MenuLinkGroup from './MenuLinkGroup/MenuLinkGroup';
 
-import popupData from '../../../assets/data/nav/popupData';
+import dropdownData from '../../../assets/data/nav/dropdownData';
 
-import workPhoto from '../../../assets/media/nav/popups/theWork.jpg';
-import galleryPhoto from '../../../assets/media/nav/popups/theGalleries.jpg';
-import shopPhoto from '../../../assets/media/nav/popups/shop.jpg'
+import workPhoto from '../../../assets/media/nav/dropdown/theWork.jpg';
+import galleryPhoto from '../../../assets/media/nav/dropdown/theGalleries.jpg';
+import shopPhoto from '../../../assets/media/nav/dropdown/shop.jpg'
 
-import './Popup.css'
+import './Dropdown.css'
 
-function Popup(props) {
-    const { nav, closePopup } = props;
+function Dropdown(props) {
+    const { nav, closeDropdown } = props;
 
-    const navLinks = popupData[nav].links.map( (link, i) => {
+    const navLinks = dropdownData[nav].links.map( (link, i) => {
         return(
-            <li className="nav_popup_link" key={ i }><Link to={link.path} onClick={ closePopup }><span className="order_number regular">{link.num}</span>  {link.name}</Link></li>
+            <li className="nav_dropdown_link" key={ i }><Link to={link.path} onClick={ closeDropdown }><span className="order_number regular">{link.num}</span>  {link.name}</Link></li>
         )
     })
 
     return(
-        <aside className={'navbar_popup' + ` ${nav}`}>
+        <aside className={'navbar_dropdown' + ` ${nav}`}>
             {
                 nav !== 'menu' ?
-                    <section className="standard_popup">
-                        <div className="popup_links">
+                    <section className="standard_dropdown">
+                        <div className="dropdown_links">
                             <ul>
                                 { navLinks }
                             </ul>
                         </div>
                         {
                             nav !== 'artist' ? <div>
-                                <div className="popup_photo">
-                                    <img src={ nav === 'work' ? workPhoto : nav === 'galleries' ? galleryPhoto : shopPhoto } alt={ popupData[nav].alt}/>
+                                <div className="dropdown_photo">
+                                    <img src={ nav === 'work' ? workPhoto : nav === 'galleries' ? galleryPhoto : shopPhoto } alt={ dropdownData[nav].alt}/>
                                 </div>
                                 <div className="nav_desc">
-                                    <h1 className="nav_h1">{ popupData[nav].title }</h1>
-                                    <p className="nav_desc_text">{ popupData[nav].desc }{ popupData[nav].descTitle ? <i id="italics">{popupData[nav].descTitle}</i> : null }.</p>
-                                    <h5 className="nav_more_link"><Link to={ popupData[nav].learnMore }>Learn More</Link></h5>
+                                    <h1 className="nav_h1">{ dropdownData[nav].title }</h1>
+                                    <p className="nav_desc_text">{ dropdownData[nav].desc }{ dropdownData[nav].descTitle ? <i id="italics">{dropdownData[nav].descTitle}</i> : null }.</p>
+                                    <h5 className="nav_more_link"><Link to={ dropdownData[nav].learnMore }>Learn More</Link></h5>
                                 </div>
                             </div>
                             : null
                         }
 
                     </section>
-                    : <section className="menu_popup">
+                    : <section className="menu_dropdown">
                         <nav className="menu_all_links">
                             <MenuLinkGroup group="aboutUs"/>
                             <MenuLinkGroup group="explore"/>
@@ -69,8 +69,8 @@ function Popup(props) {
     )
 }
 
-// Popup.defaultProps = {
+// Dropdown.defaultProps = {
 //     nav: 'work'
 // }
 
-export default Popup;
+export default Dropdown;

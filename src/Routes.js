@@ -19,10 +19,10 @@ import Login from './components/user/Login/Login';
 
 function Routes(props) {
     return(
-        <main className="app_body" onClick={ props.closePopup }>
+        <main className="app_body" onClick={ props.closeDropdown }>
         <Route exact path="/" component={ Home }/>
           <Route path="/collections/:collectionPath" component={ Shop }/>
-          <Route path="/pages/:galleryName" component={ Gallery }/>
+          <Route path="/pages/galleries/:galleryName" component={ Gallery }/>
           <Route path="/cart" component={ Cart }/>
           <Route path="/wishlist" component={ Wishlist }/>
           <Route path="/account" component={ Account }/>

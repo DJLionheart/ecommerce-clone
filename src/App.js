@@ -22,7 +22,7 @@ class App extends Component {
     this.openArtist = this.openArtist.bind(this);
     this.openShop = this.openShop.bind(this);
     this.openMenu = this.openMenu.bind(this);
-    this.closePopup = this.closePopup.bind(this);
+    this.closeDropdown = this.closeDropdown.bind(this);
 }
 
 componentDidMount() {
@@ -86,7 +86,7 @@ openMenu() {
     })
 }
 
-closePopup() {
+closeDropdown() {
     this.setState({
         workOpen: false,
         galleriesOpen: false,
@@ -106,7 +106,7 @@ closePopup() {
             openArtist={ this.openArtist }
             openShop={ this.openShop }
             openMenu={ this.openMenu }
-            closePopup={ this.closePopup }
+            closeDropdown={ this.closeDropdown }
             state={ this.state }
           />
           <br/>
@@ -114,7 +114,8 @@ closePopup() {
           <br/>
           <br/>
           <br/>
-          <Routes closePopup={ this.closePopup }/>
+          <br/>
+          <Routes closeDropdown={ this.closeDropdown }/>
         </div>
       </Router>
     );

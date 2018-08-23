@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 
 import './NavBar.css';
 import FullLogo from '../logos/FullLogo/FullLogo';
-import Popup from './Popup/Popup';
+import Dropdown from './Dropdown/Dropdown';
 
 function NavBar(props) {
-    const { openWork, openGalleries, openArtist, openShop, openMenu, closePopup, state } = props;
+    const { openWork, openGalleries, openArtist, openShop, openMenu, closeDropdown, state } = props;
     const { workOpen, galleriesOpen, artistOpen, shopOpen, menuOpen, atTheTop } = state;
 
     return(
         <header className={ atTheTop ? 'nav_bar top' : 'nav_bar scrolled' }>
             <div className="logo_container">
-                <Link onClick={ closePopup } to="/"><FullLogo/></Link>
+                <Link onClick={ closeDropdown } to="/"><FullLogo/></Link>
             </div>
             <ul className="navbar_links">
                 <li className="nav_li" onClick={ openWork }>THE WORK</li>
@@ -29,11 +29,13 @@ function NavBar(props) {
                 </li> 
                 <li className="nav_icon">
                     <span className="cart_btn">
-                        <svg className="icon cart_icon" viewBox="0 0 18 18">
-                            <path d="M17.9 2.1l-1.3 5.6c-.2.8-.8 1.3-1.6 1.3H4.5v2.2h11.2c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1H3.9c-.9 0-1.7-.8-1.7-1.7V2.2H1.1C.5 2.2 0 1.7 0 1.1 0 .5.5 0 1.1 0h15.2c1.1 0 1.9 1 1.6 2.1zM5.1 14.6c.9 0 1.7.8 1.7 1.7 0 .9-.8 1.7-1.7 1.7-.9 0-1.7-.8-1.7-1.7 0-.9.7-1.7 1.7-1.7zm9 0c.9 0 1.7.8 1.7 1.7 0 .9-.8 1.7-1.7 1.7s-1.7-.8-1.7-1.7c0-.9.7-1.7 1.7-1.7z">
-                            </path>
-                        </svg>
-                        0
+                        <Link to="/cart">
+                            <svg className="icon cart_icon" viewBox="0 0 18 18">
+                                <path d="M17.9 2.1l-1.3 5.6c-.2.8-.8 1.3-1.6 1.3H4.5v2.2h11.2c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1H3.9c-.9 0-1.7-.8-1.7-1.7V2.2H1.1C.5 2.2 0 1.7 0 1.1 0 .5.5 0 1.1 0h15.2c1.1 0 1.9 1 1.6 2.1zM5.1 14.6c.9 0 1.7.8 1.7 1.7 0 .9-.8 1.7-1.7 1.7-.9 0-1.7-.8-1.7-1.7 0-.9.7-1.7 1.7-1.7zm9 0c.9 0 1.7.8 1.7 1.7 0 .9-.8 1.7-1.7 1.7s-1.7-.8-1.7-1.7c0-.9.7-1.7 1.7-1.7z">
+                                </path>
+                            </svg>
+                            0
+                        </Link>
                     </span>
                 </li>
                 {
@@ -47,7 +49,7 @@ function NavBar(props) {
                                 </rect>
                             </svg>
                         </li>
-                        : <li className="nav_icon" onClick={ closePopup }>
+                        : <li className="nav_icon" onClick={ closeDropdown }>
                             <svg id="close_menu_btn" viewBox="0 0 28 28" width="100%" height="100%">
                                 <rect className="menu_top" y="6" width="28" height="2" data-svg-origin="14 7" transform="matrix(0.7071,0.7071,-0.7071,0.7071,9.050252531694166,-0.8492424049174971)" style={{transformOrigin: '0px 0px 0px'}}>
                                 </rect>
@@ -60,19 +62,19 @@ function NavBar(props) {
                 }
             </ul>
             { 
-                workOpen ? <Popup nav="work" closePopup={ closePopup }/> : null
+                workOpen ? <Dropdown nav="work" closeDropdown={ closeDropdown }/> : null
             }
             { 
-                galleriesOpen ? <Popup nav="galleries" closePopup={ closePopup }/> : null
+                galleriesOpen ? <Dropdown nav="galleries" closeDropdown={ closeDropdown }/> : null
             }
             { 
-                artistOpen ? <Popup nav="artist" closePopup={ closePopup }/> : null
+                artistOpen ? <Dropdown nav="artist" closeDropdown={ closeDropdown }/> : null
             }
             { 
-                shopOpen ? <Popup nav="shop" closePopup={ closePopup }/> : null
+                shopOpen ? <Dropdown nav="shop" closeDropdown={ closeDropdown }/> : null
             }
             { 
-                menuOpen ? <Popup nav="menu" closePopup={ closePopup }/> : null
+                menuOpen ? <Dropdown nav="menu" closeDropdown={ closeDropdown }/> : null
             }
         </header>
     )

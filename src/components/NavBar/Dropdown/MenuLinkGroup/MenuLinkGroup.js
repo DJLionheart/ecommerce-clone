@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { menu } from '../../../../assets/data/nav/popupData';
+import { menu } from '../../../../assets/data/nav/dropdownData';
 
 function MenuLinkGroup(props) {
     const { group } = props;
