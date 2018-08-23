@@ -1,10 +1,17 @@
 const galleryData = require('../gallerylist');
 
+const aboutUs = require('../menu-links/aboutUs');
+const customerService = require('../menu-links/customerService');
+const explore = require('../menu-links/explore');
+const legal = require('../menu-links/legal');
+const sales = require('../menu-links/sales');
+
 module.exports = {
     'work': {
         title: 'Whispering Sea',
         alt: 'product preview',
-        desc: "Experience the stunning beauty of Peter Lik's masterwork, " + "Whispering Sea".italics() + ".",
+        desc: "Experience the stunning beauty of Peter Lik's masterwork, ",
+        descTitle: 'Whispering Sea',
         learnMore: '/products/whispering-sea',
         links: [
             {num: '/01', name: 'New Releases', path: '/shop/collections/new-release'}, 
@@ -31,23 +38,23 @@ module.exports = {
     'galleries': {
         title: 'Mandalay Bay',
         alt: 'gallery preview',
-        desc: "Located on The Strip, this fine art gallery is positioned amongst some of the city's well-known names in luxury.",
+        desc: "Located on The Strip, this fine art gallery is positioned amongst some of the city's well-known names in luxury",
         learnMore: '/pages/lik-mandalay',
         links: galleryData.default
     },
 
     'artist': {
         links: [
-            {order: '/01', title: 'Biography', path: '/pages/biography'},
-            {order: '/02', title: 'Awards', path: '/pages/awards'},
-            {order: '/03', title: 'Media', path: '/pages/media'}
+            {num: '/01', name: 'Biography', path: '/pages/biography'},
+            {num: '/02', name: 'Awards', path: '/pages/awards'},
+            {num: '/03', name: 'Media', path: '/pages/media'}
         ]
     },
 
     'shop': {
         title: 'Equation of Time',
         alt: 'product preview',
-        desc: "This epic collection of world-class photography showcases Peter's most stunning visions from around the world.",
+        desc: "This epic collection of world-class photography showcases Peter's most stunning visions from around the world",
         learnMore: '/products/equation-of-time',
         links: [
             {num: '/01', name: 'Limited Editions', path: '/collections/limited-edition'},
@@ -65,6 +72,11 @@ module.exports = {
             {name: 'Create Account', path: '/account/register'},
             {name: 'Log in', path: '/account/login'},
             {name: 'Wishlist', path: '/wishlist'},
-        ]
+        ],
+        aboutUs: aboutUs.default,
+        explore: explore.default,
+        customerService: customerService.default,
+        sales: sales.default,
+        legal: legal.default
     }
 }

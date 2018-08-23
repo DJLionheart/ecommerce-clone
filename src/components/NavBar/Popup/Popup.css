@@ -4,3 +4,7 @@
     background-color: magenta;
     width: 100vw;
 }
+
+#italics {
+    font-style: italic;
+}

@@ -1,25 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import NavBar from './components/NavBar/NavBar';
-import Home from './components/Home/Home';
-import Shop from './components/Shop/Shop';
-import Cart from './components/Cart/Cart';
-import Gallery from './components/pages/Gallery/Gallery';
-import Biography from './components/pages/Biography/Biography';
-import Awards from './components/pages/Awards/Awards';
-import Media from './components/pages/Media/Media';
-import Contact from './components/pages/Contact/Contact'
-import ProductPage from './components/Shop/ProductPage/ProductPage';
-import Footer from './components/Footer/Footer';
-import Account from './components/user/Account/Account';
-import Addresses from './components/user/Addresses/Addresses';
-import Wishlist from './components/user/Wishlist/Wishlist';
-import Register from './components/user/Register/Register';
-import Login from './components/user/Login/Login';
+import Routes from './Routes';
 
 import './assets/styles/App.css';
-import Routes from './Routes';
 
 class App extends Component {
   constructor() {
