@@ -1,9 +1,17 @@
-header {
+.nav_bar {
     z-index: 2;
     position: fixed;
     width: 100vw;
     display: flex;
     background-color: rgba(0, 0, 0, 0);
+}
+
+.top {
+    background-color: lightgrey;
+}
+
+.scrolled {
+    background-color: limegreen;
 }
 
 .nav_icon {

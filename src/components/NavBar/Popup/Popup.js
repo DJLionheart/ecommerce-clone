@@ -10,20 +10,14 @@ import shopPhoto from '../../../assets/media/nav/popups/shop.jpg'
 import './Popup.css'
 
 function Popup(props) {
-    console.log(popupData.artist.links);
-    const { nav } = props;
+    const { nav, closePopup } = props;
 
     const navLinks = popupData[nav].links.map( (link, i) => {
         return(
-            <li className="nav_popup_link" key={ i }><Link to={link.path}><span className="order_number regular">{link.num}</span>  {link.name}</Link></li>
+            <li className="nav_popup_link" key={ i }><Link to={link.path} onClick={ closePopup }><span className="order_number regular">{link.num}</span>  {link.name}</Link></li>
         )
     })
 
-    const artistLinks = popupData.artist.links.map( artistLink => {
-        return <li className="artist_link" key={ artistLink.path }><Link to={ artistLink.path }><span className="order_number large">{artistLink.num}</span>{ artistLink.title }</Link></li>
-    })
-
-    console.log('artistLinks: ', artistLinks)
     return(
         <aside className={'navbar_popup' + ` ${nav}`}>
             {

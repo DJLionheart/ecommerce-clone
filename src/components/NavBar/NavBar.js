@@ -7,12 +7,12 @@ import Popup from './Popup/Popup';
 
 function NavBar(props) {
     const { openWork, openGalleries, openArtist, openShop, closePopup, state } = props;
-    const { workOpen, galleriesOpen, artistOpen, shopOpen } = state;
+    const { workOpen, galleriesOpen, artistOpen, shopOpen, scrollTop } = state;
 
     return(
-        <header>
+        <header className={ scrollTop ? 'nav_bar top' : 'nav_bar scrolled' }>
             <div className="logo_container">
-                <Link to="/"><FullLogo/></Link>
+                <Link onClick={ closePopup } to="/"><FullLogo/></Link>
             </div>
             <ul className="navbar_links">
                 <li className="nav_li" onClick={ openWork }>THE WORK</li>

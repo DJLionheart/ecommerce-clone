@@ -14,7 +14,8 @@ class App extends Component {
       galleriesOpen: false,
       artistOpen: false,
       shopOpen: false,
-      menuOpen: false
+      menuOpen: false,
+      scrollTop: true
     }
     this.openWork = this.openWork.bind(this);
     this.openGalleries = this.openGalleries.bind(this);
@@ -22,7 +23,18 @@ class App extends Component {
     this.openShop = this.openShop.bind(this);
     this.openMenu = this.openMenu.bind(this);
     this.closePopup = this.closePopup.bind(this);
-} 
+}
+
+componentDidMount() {
+  document.addEventListener('scroll', ()=> {
+    const atTheTop = window.scrollY < 100;
+    if(atTheTop !== this.state.scrollTop) {
+      this.setState({
+        scrollTop: false
+      })
+    }
+  })
+}
 
 openWork() {
     this.setState({
