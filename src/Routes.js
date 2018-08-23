@@ -25,7 +25,7 @@ function Routes(props) {
           <Route path="/pages/galleries/:galleryName" component={ Gallery }/>
           <Route path="/cart" component={ Cart }/>
           <Route path="/wishlist" component={ Wishlist }/>
-          <Route path="/account" component={ Account }/>
+          <Route exact path="/account" component={ Account }/>
           <Route path="/account/register" component={ Register }/>
           <Route path="/account/login" component={ Login }/>
           <Route path="/account/addresses" component={ Addresses }/>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import ScrollLock from 'react-scrolllock';
 
 import NavBar from './components/NavBar/NavBar';
 import Routes from './Routes';
@@ -116,6 +117,7 @@ closeDropdown() {
 }
 
   render() {
+      const {workOpen, galleriesOpen, artistOpen, shopOpen, searchOpen, menuOpen } = this.state;
     return (
       <Router>
         <div className="App">
@@ -136,6 +138,9 @@ closeDropdown() {
           <br/>
           <br/>
           <Routes closeDropdown={ this.closeDropdown }/>
+          {
+            workOpen || galleriesOpen || artistOpen || shopOpen || searchOpen || menuOpen ? <ScrollLock/> : null
+          }
         </div>
       </Router>
     );

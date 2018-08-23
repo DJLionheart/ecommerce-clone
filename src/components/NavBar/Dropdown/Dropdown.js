@@ -20,6 +20,10 @@ function Dropdown(props) {
         )
     })
 
+    const accountLinks = dropdownData.menu.links.map( link => {
+        return <li className="account_link" key={ link.path } onClick={ closeDropdown }><Link to={link.path}>{ link.name }</Link></li>
+    })
+
     return(
         <aside className={'navbar_dropdown' + ` ${nav}`}>
             {
@@ -53,13 +57,11 @@ function Dropdown(props) {
                             <MenuLinkGroup group="sales"/>
                             <MenuLinkGroup group="legal"/>
                         </nav>
-
                         <nav className="menu_account_links">
                             <section>
-                                <h5 className="account_headingg">Account</h5>
-                                <ul className="menu_links">
-
-
+                                <h5 className="account_heading">Account</h5>
+                                <ul className="account_links">
+                                    { accountLinks }
                                 </ul>
                             </section>
                         </nav>

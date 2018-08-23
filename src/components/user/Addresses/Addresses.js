@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import AddressModal from './AddressModal/AddressModal';
+
 
 /*
     Edit address brings up a modal to update the details
@@ -22,7 +24,7 @@ class Addresses extends Component {
     }
 
     render() {
-        const { defaultAddress, addresses } = this.state;
+        const { defaultAddress, addresses, addAddress, editAddress } = this.state;
         
         const addressList = addresses.map( (address, i) => {
             return(
@@ -35,12 +37,18 @@ class Addresses extends Component {
 
         return(
             <main className="addresses_page">
+                {
+                    addAddress ? <AddressModal addAddress/> : null
+                }
+                {
+                    editAddress ? <AddressModal/> : null
+                }
                 <span className="side_link">
-                    <h4 className="back_btn">Back to Account</h4>
+                    <h4 className="back_btn"><Link to="/account">Back to Account</Link></h4>
                 </span>
                 <span className="addresses_header">
                     <h1>Account Addresses</h1>
-                    <h5 className="add_address">+ Add a New Address</h5>
+                    <h5 className="add_address" onClick={ () => this.setState({addAddress: true})}>+ Add a New Address</h5>
                 </span>
 
                 <hr id="addresses_divider"/>

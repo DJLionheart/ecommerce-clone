@@ -71,6 +71,7 @@ class AddressModal extends Component {
 
         return(
             <aside className={ display ? "address_modal" : "modal_hidden" }>
+                
                 {
                     addAddress ? <h1 className="address_modal_header">Add a New Address</h1> : <h1 className="address_modal_header">Edit Address</h1>
                 }

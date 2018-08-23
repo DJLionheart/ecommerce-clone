@@ -29,7 +29,7 @@ class Login extends Component {
     render() {
         return(
             <main className="create_account">
-                <h1>Create an Account</h1>
+                <h1>Login</h1>
                 <form onSubmit={ this.login }>
                     <input name="email" type="email" onChange={ e => this.handleUpdate(e) }/>
                     <input name="pass" type="password" onChange={ e => this.handleUpdate(e) }/>

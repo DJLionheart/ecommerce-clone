@@ -8,3 +8,11 @@
 #italics {
     font-style: italic;
 }
+
+.menu_dropdown {
+    background-color: cornflowerblue;
+}
+
+.menu_account_links {
+    background-color: grey;
+}
