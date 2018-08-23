@@ -1,0 +1,7 @@
+.search_dropdown {
+    position: fixed;
+    top: 85px;
+    width: 100vw;
+    height: 20vh;
+    background-color: aquamarine;
+}

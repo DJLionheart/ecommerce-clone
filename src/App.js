@@ -14,6 +14,7 @@ class App extends Component {
       galleriesOpen: false,
       artistOpen: false,
       shopOpen: false,
+      searchOpen: false,
       menuOpen: false,
       atTheTop: true
     }
@@ -21,6 +22,7 @@ class App extends Component {
     this.openGalleries = this.openGalleries.bind(this);
     this.openArtist = this.openArtist.bind(this);
     this.openShop = this.openShop.bind(this);
+    this.openSearch = this.openSearch.bind(this);
     this.openMenu = this.openMenu.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
 }
@@ -39,6 +41,7 @@ componentDidMount() {
 openWork() {
     this.setState({
         workOpen: true,
+        searchOpen: false,        
         galleriesOpen: false,
         artistOpen: false,
         shopOpen: false,
@@ -49,6 +52,7 @@ openWork() {
 openGalleries() {
     this.setState({
         galleriesOpen: true,
+        searchOpen: false,
         workOpen: false,
         artistOpen: false,
         shopOpen: false,
@@ -59,6 +63,7 @@ openGalleries() {
 openArtist() {
     this.setState({
         artistOpen: true,
+        searchOpen: false,
         galleriesOpen: false,
         workOpen: false,
         shopOpen: false,
@@ -69,6 +74,7 @@ openArtist() {
 openShop() {
     this.setState({
         shopOpen: true,
+        searchOpen: false,
         galleriesOpen: false,
         artistOpen: false,
         workOpen: false,
@@ -76,9 +82,21 @@ openShop() {
     })
 }
 
+openSearch() {
+    this.setState({
+        searchOpen: true,
+        menuOpen: false,
+        shopOpen: false,
+        galleriesOpen: false,
+        artistOpen: false,
+        workOpen: false
+    })
+}
+
 openMenu() {
     this.setState({
         menuOpen: true,
+        searchOpen: false,
         shopOpen: false,
         galleriesOpen: false,
         artistOpen: false,
@@ -89,6 +107,7 @@ openMenu() {
 closeDropdown() {
     this.setState({
         workOpen: false,
+        searchOpen: false,
         galleriesOpen: false,
         artistOpen: false,
         shopOpen: false,
@@ -105,6 +124,7 @@ closeDropdown() {
             openGalleries={ this.openGalleries }
             openArtist={ this.openArtist }
             openShop={ this.openShop }
+            openSearch={ this.openSearch }
             openMenu={ this.openMenu }
             closeDropdown={ this.closeDropdown }
             state={ this.state }

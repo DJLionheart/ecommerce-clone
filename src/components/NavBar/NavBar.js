@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 import './NavBar.css';
 import FullLogo from '../logos/FullLogo/FullLogo';
 import Dropdown from './Dropdown/Dropdown';
+import SearchBar from '../SearchBar/SearchBar';
 
 function NavBar(props) {
-    const { openWork, openGalleries, openArtist, openShop, openMenu, closeDropdown, state } = props;
-    const { workOpen, galleriesOpen, artistOpen, shopOpen, menuOpen, atTheTop } = state;
+    const { openWork, openGalleries, openArtist, openShop, openSearch, openMenu, closeDropdown, state } = props;
+    const { workOpen, galleriesOpen, artistOpen, shopOpen, searchOpen, menuOpen, atTheTop } = state;
 
     return(
         <header className={ atTheTop ? 'nav_bar top' : 'nav_bar scrolled' }>
@@ -21,7 +22,7 @@ function NavBar(props) {
                 <li className="nav_li" onClick={ openShop }>SHOP</li>
             </ul>
             <ul className="nav_btns">
-                <li className="nav_icon">
+                <li className="nav_icon" onClick={ !searchOpen ? openSearch : closeDropdown}>
                     <svg className="icon search_icon" viewBox="0 0 20 20">
                         <path d="M7.5 2.5c2.8 0 5 2.2 5 5 0 1-.3 2-.9 2.9l-.5.7-.7.5c-.9.6-1.9.9-2.9.9-2.8 0-5-2.2-5-5s2.2-5 5-5m0-2.5C3.4 0 0 3.4 0 7.5S3.4 15 7.5 15c1.6 0 3.1-.5 4.3-1.4l6 6c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8l-6-6c.9-1.2 1.4-2.7 1.4-4.3C15 3.4 11.6 0 7.5 0z">
                         </path>
@@ -72,6 +73,9 @@ function NavBar(props) {
             }
             { 
                 shopOpen ? <Dropdown nav="shop" closeDropdown={ closeDropdown }/> : null
+            }
+            {
+                searchOpen ? <SearchBar closeDropdown={ closeDropdown}/> : null
             }
             { 
                 menuOpen ? <Dropdown nav="menu" closeDropdown={ closeDropdown }/> : null
