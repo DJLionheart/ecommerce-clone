@@ -15,7 +15,7 @@ class App extends Component {
       artistOpen: false,
       shopOpen: false,
       menuOpen: false,
-      scrollTop: true
+      atTheTop: true
     }
     this.openWork = this.openWork.bind(this);
     this.openGalleries = this.openGalleries.bind(this);
@@ -27,10 +27,10 @@ class App extends Component {
 
 componentDidMount() {
   document.addEventListener('scroll', ()=> {
-    const atTheTop = window.scrollY < 100;
-    if(atTheTop !== this.state.scrollTop) {
+    const atTheTop = window.scrollY < 101;
+    if(atTheTop !== this.state.atTheTop) {
       this.setState({
-        scrollTop: false
+        atTheTop
       })
     }
   })
@@ -91,7 +91,8 @@ closePopup() {
         workOpen: false,
         galleriesOpen: false,
         artistOpen: false,
-        shopOpen: false
+        shopOpen: false,
+        menuOpen: false
     })
 }
 

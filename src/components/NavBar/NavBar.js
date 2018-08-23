@@ -6,11 +6,11 @@ import FullLogo from '../logos/FullLogo/FullLogo';
 import Popup from './Popup/Popup';
 
 function NavBar(props) {
-    const { openWork, openGalleries, openArtist, openShop, closePopup, state } = props;
-    const { workOpen, galleriesOpen, artistOpen, shopOpen, scrollTop } = state;
+    const { openWork, openGalleries, openArtist, openShop, openMenu, closePopup, state } = props;
+    const { workOpen, galleriesOpen, artistOpen, shopOpen, menuOpen, atTheTop } = state;
 
     return(
-        <header className={ scrollTop ? 'nav_bar top' : 'nav_bar scrolled' }>
+        <header className={ atTheTop ? 'nav_bar top' : 'nav_bar scrolled' }>
             <div className="logo_container">
                 <Link onClick={ closePopup } to="/"><FullLogo/></Link>
             </div>
@@ -35,17 +35,29 @@ function NavBar(props) {
                         </svg>
                         0
                     </span>
-                </li> 
-                <li className="nav_icon">
-                    <svg id="burg" viewBox="0 0 28 28" width="100%" height="100%">
-                        <rect className="menu_top" y="6" width="28" height="2" data-svg-origin="14 7" transform="matrix(1,0,0,1,0,0)">
-                        </rect>
-                        <rect className="menu_middle" y="13" width="28" height="2" data-svg-origin="14 14" transform="matrix(1,0,0,1,0,0)">
-                        </rect>
-                        <rect className="menu_bottom" y="20" width="28" height="2" data-svg-origin="14 21" transform="matrix(1,0,0,1,0,0)">
-                        </rect>
-                    </svg>
-                </li> 
+                </li>
+                {
+                    !menuOpen ? <li className="nav_icon" onClick={ openMenu }>
+                            <svg id="menu_btn" viewBox="0 0 28 28" width="100%" height="100%">
+                                <rect className="menu_top" y="6" width="28" height="2" data-svg-origin="14 7" transform="matrix(1,0,0,1,0,0)">
+                                </rect>
+                                <rect className="menu_middle" y="13" width="28" height="2" data-svg-origin="14 14" transform="matrix(1,0,0,1,0,0)">
+                                </rect>
+                                <rect className="menu_bottom" y="20" width="28" height="2" data-svg-origin="14 21" transform="matrix(1,0,0,1,0,0)">
+                                </rect>
+                            </svg>
+                        </li>
+                        : <li className="nav_icon" onClick={ closePopup }>
+                            <svg id="close_menu_btn" viewBox="0 0 28 28" width="100%" height="100%">
+                                <rect className="menu_top" y="6" width="28" height="2" data-svg-origin="14 7" transform="matrix(0.7071,0.7071,-0.7071,0.7071,9.050252531694166,-0.8492424049174971)" style={{transformOrigin: '0px 0px 0px'}}>
+                                </rect>
+                                <rect className="menu_middle" y="13" width="28" height="2" data-svg-origin="14 14" transform="matrix(1,0,0,1,0,0)" style={{opacity: 0, transformOrigin: '0px 0px 0px'}}>
+                                </rect>
+                                <rect className="menu_bottom" y="20" width="28" height="2" data-svg-origin="14 21" transform="matrix(0.7071,-0.7071,0.7071,0.7071,-10.748737341529164,9.050252531694163)" style={{transformOrigin: '0px 0px 0px'}}>
+                                </rect>
+                            </svg> 
+                        </li> 
+                }
             </ul>
             { 
                 workOpen ? <Popup nav="work" closePopup={ closePopup }/> : null
@@ -58,6 +70,9 @@ function NavBar(props) {
             }
             { 
                 shopOpen ? <Popup nav="shop" closePopup={ closePopup }/> : null
+            }
+            { 
+                menuOpen ? <Popup nav="menu" closePopup={ closePopup }/> : null
             }
         </header>
     )

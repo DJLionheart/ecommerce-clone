@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+import MenuLinkGroup from './MenuLinkGroup/MenuLinkGroup';
+
 import popupData from '../../../assets/data/nav/popupData';
 
 import workPhoto from '../../../assets/media/nav/popups/theWork.jpg';
@@ -44,7 +46,15 @@ function Popup(props) {
 
                     </section>
                     : <section className="menu_popup">
-                        <nav className="menu_nav">
+                        <nav className="menu_all_links">
+                            <MenuLinkGroup group="aboutUs"/>
+                            <MenuLinkGroup group="explore"/>
+                            <MenuLinkGroup group="customerService"/>
+                            <MenuLinkGroup group="sales"/>
+                            <MenuLinkGroup group="legal"/>
+                        </nav>
+
+                        <nav className="menu_account_links">
                             <section>
                                 <h5 className="account_headingg">Account</h5>
                                 <ul className="menu_links">

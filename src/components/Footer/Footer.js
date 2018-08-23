@@ -4,11 +4,11 @@ import LinkList from './LinkList/LinkList';
 import SmallLogo from '../logos/SmallLogo/SmallLogo';
 
 import galleries from '../../assets/data/gallerylist';
-import aboutUs from '../../assets/data/footer-links/aboutUs';
-import explore from '../../assets/data/footer-links/explore';
-import sales from '../../assets/data/footer-links/sales';
-import customerService from '../../assets/data/footer-links/customerService';
-import legal from '../../assets/data/footer-links/legal';
+import aboutUs from '../../assets/data/menu-links/aboutUs';
+import explore from '../../assets/data/menu-links/explore';
+import sales from '../../assets/data/menu-links/sales';
+import customerService from '../../assets/data/menu-links/customerService';
+import legal from '../../assets/data/menu-links/legal';
 
 import './Footer.css';
 

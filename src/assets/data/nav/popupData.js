@@ -73,10 +73,10 @@ module.exports = {
             {name: 'Log in', path: '/account/login'},
             {name: 'Wishlist', path: '/wishlist'},
         ],
-        aboutUs: aboutUs.default,
-        explore: explore.default,
-        customerService: customerService.default,
-        sales: sales.default,
-        legal: legal.default
+        aboutUs: {name: 'About Us', links: aboutUs.default},
+        explore: {name: 'Explore', links: explore.default},
+        customerService: {name: 'Customer Service', links: customerService.default},
+        sales: {name: 'Sales', links: sales.default},
+        legal: {name: 'Legal', links: legal.default}
     }
 }
