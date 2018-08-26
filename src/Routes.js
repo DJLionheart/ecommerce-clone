@@ -16,6 +16,8 @@ import Addresses from './components/user/Addresses/Addresses';
 import Wishlist from './components/user/Wishlist/Wishlist';
 import Register from './components/user/Register/Register';
 import Login from './components/user/Login/Login';
+import FAQ from './components/pages/FAQ/FAQ';
+import HanginsIns from './components/pages/HangingIns/HangingIns';
 
 function Routes(props) {
     return(
@@ -33,6 +35,8 @@ function Routes(props) {
           <Route path="/pages/awards" component={ Awards }/>
           <Route path="/pages/media" component={ Media }/>
           <Route path="/pages/contact-us" component={ Contact }/>
+          <Route path="/pages/faq" component={ FAQ }/>
+          <Route path="/pages/hanging-instructions" component={ HanginsIns }/>
           <Route path="/products/:productName" component={ ProductPage }/>
           <Footer/>
         </main>
