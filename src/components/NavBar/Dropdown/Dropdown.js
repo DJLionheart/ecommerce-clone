@@ -25,7 +25,7 @@ function Dropdown(props) {
     })
 
     return(
-        <aside className={'navbar_dropdown' + ` ${nav}`}>
+        <aside className="navbar_dropdown">
             {
                 nav !== 'menu' ?
                     <section className="standard_dropdown">
@@ -51,11 +51,11 @@ function Dropdown(props) {
                     </section>
                     : <section className="menu_dropdown">
                         <nav className="menu_all_links">
-                            <MenuLinkGroup group="aboutUs"/>
-                            <MenuLinkGroup group="explore"/>
-                            <MenuLinkGroup group="customerService"/>
-                            <MenuLinkGroup group="sales"/>
-                            <MenuLinkGroup group="legal"/>
+                            <MenuLinkGroup group="aboutUs" closeDropdown={ closeDropdown }/>
+                            <MenuLinkGroup group="explore" closeDropdown={ closeDropdown }/>
+                            <MenuLinkGroup group="customerService" closeDropdown={ closeDropdown }/>
+                            <MenuLinkGroup group="sales" closeDropdown={ closeDropdown }/>
+                            <MenuLinkGroup group="legal" closeDropdown={ closeDropdown }/>
                         </nav>
                         <nav className="menu_account_links">
                             <section>

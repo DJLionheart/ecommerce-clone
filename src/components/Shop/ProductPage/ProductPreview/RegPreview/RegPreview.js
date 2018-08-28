@@ -20,7 +20,7 @@ class RegPreview extends Component {
     
     render() {
         const { product } = this.props;
-        const { currentIndex } = this.state
+        // const { currentIndex } = this.state
 
         const slides = product.previewGallery.map( (src, index) => {
             return <Slide key={index} index={index}><section className="carousel_container"><img className="carousel_img" src={ src } alt="product preview"/></section></Slide>

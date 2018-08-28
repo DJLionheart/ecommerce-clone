@@ -17,7 +17,6 @@ class AddressModal extends Component {
             secondLine: '',
             city: '',
             country: 'United States',
-            stateSelector: true,
             region: 'Alabama',
             postalCode: '',
             phone: '',
@@ -67,7 +66,7 @@ class AddressModal extends Component {
     render() {
         const { addAddress } = this.props;
         console.log(this.props)
-        const { display, firstName, lastName, company, firstLine, secondLine, city, country, stateSelector, region, postalCode, phone, defaultAddress } = this.state;
+        const { display, firstName, lastName, company, firstLine, secondLine, city, country, region, postalCode, phone, defaultAddress } = this.state;
 
         return(
             <aside className={ display ? "address_modal" : "modal_hidden" }>

@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import { menu } from '../../../../assets/data/nav/dropdownData';
 
 function MenuLinkGroup(props) {
-    const { group } = props;
+    const { group, closeDropdown } = props;
 
     const menuLinks = menu[group].links.map( link => {
-        return <li key={ link.path }><Link to={link.path}>{link.name}</Link></li>
+        return <li key={ link.path } onClick={ closeDropdown }><Link to={link.path}>{link.name}</Link></li>
     })
     return(
         <span className="menu_link_group">

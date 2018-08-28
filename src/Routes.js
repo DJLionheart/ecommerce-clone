@@ -17,7 +17,15 @@ import Wishlist from './components/user/Wishlist/Wishlist';
 import Register from './components/user/Register/Register';
 import Login from './components/user/Login/Login';
 import FAQ from './components/pages/FAQ/FAQ';
-import HanginsIns from './components/pages/HangingIns/HangingIns';
+import HangingIns from './components/pages/HangingIns/HangingIns';
+import CareHandling from './components/pages/CareHandling/CareHandling';
+import PrivacyPolicy from './components/pages/PrivacyPolicy/PrivacyPolicy';
+import TermsOfUse from './components/pages/TermsOfUse/TermsOfUse';
+import TermsOfSale from './components/pages/TermsOfSale/TermsOfSale';
+import Inspiration from './components/pages/Inspiration/Inspiration';
+import Process from './components/pages/Process/Process';
+import Blog from './components/Blog/Blog';
+import BlogPost from './components/Blog/BlogPost/BlogPost';
 
 function Routes(props) {
     return(
@@ -36,7 +44,15 @@ function Routes(props) {
           <Route path="/pages/media" component={ Media }/>
           <Route path="/pages/contact-us" component={ Contact }/>
           <Route path="/pages/faq" component={ FAQ }/>
-          <Route path="/pages/hanging-instructions" component={ HanginsIns }/>
+          <Route path="/pages/hanging-instructions" component={ HangingIns }/>
+          <Route path="/pages/care-handling" component={ CareHandling }/>
+          <Route path="/pages/privacy-policy" component={ PrivacyPolicy }/>
+          <Route path="/pages/terms-of-use" component={ TermsOfUse }/>
+          <Route path="/pages/terms-of-sale" component={ TermsOfSale }/>
+          <Route path="/pages/inspiration" component={ Inspiration }/>
+          <Route path="/pages/process" component={ Process }/>
+          <Route path="/blogs/journal" component={ Blog }/>
+          <Route path="/blogs/journal/:postPath" component={ BlogPost }/>
           <Route path="/products/:productName" component={ ProductPage }/>
           <Footer/>
         </main>

@@ -24,7 +24,7 @@ class Addresses extends Component {
     }
 
     render() {
-        const { defaultAddress, addresses, addAddress, editAddress } = this.state;
+        const { addresses, addAddress, editAddress } = this.state;
         
         const addressList = addresses.map( (address, i) => {
             return(

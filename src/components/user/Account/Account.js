@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import AddressModal from '../Addresses/AddressModal/AddressModal';
+// import AddressModal from '../Addresses/AddressModal/AddressModal';
 
 
 class Account extends Component {

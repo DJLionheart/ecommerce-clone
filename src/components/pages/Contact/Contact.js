@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Button from '../../buttons/Button/Button';
+
 class Contact extends Component {
     constructor() {
         super();
@@ -33,7 +35,8 @@ class Contact extends Component {
                    <input type="text" onChange={ (evt) => this.updateForm(evt) }name="email" value={ email }/> 
                    <input type="text" onChange={ (evt) => this.updateForm(evt) }name="phone" value={ phone }/> 
                    <input type="text" onChange={ (evt) => this.updateForm(evt) }name="imageName" value={ imageName }/> 
-                   <input type="text" onChange={ (evt) => this.updateForm(evt) }name="msgText" value={ msgText }/> 
+                   <input type="text" onChange={ (evt) => this.updateForm(evt) }name="msgText" value={ msgText }/>
+                    <Button variant="framed">Send</Button>
                 </form>
             </main>
         )

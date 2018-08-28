@@ -23,8 +23,9 @@ function FAQ() {
                 <br/>
                 <hr/>
             </article>
-            <article className="faq_contents" id="faq-general">
-                <h2 className="medium_heading">{ faqHeadings[0].name }</h2>
+            <article className="faq_contents">
+                
+                <a name="faq-general"><h2 className="medium_heading">{ faqHeadings[0].name }</h2></a>
                 <br/>
                 <h4 className="bold_subheading">Where are you located?</h4>
                 <p className="faq_p">Corporate Offices</p>
@@ -100,7 +101,7 @@ function FAQ() {
             </article>
             <hr/>
             <article className="faq_contents" id="faq-about">
-                <h2 className="medium_heading">{ faqHeadings[1].name }</h2>
+                <a name="faq-about"><h2 className="medium_heading">{ faqHeadings[1].name }</h2></a>
                 <h4 className="bold_subheading">What is LIK Fine Art?</h4>
                 <p className="faq_p">LIK Fine Art is a luxury brand of Fine Art Photography by Master Photographer Peter Lik. Founded in Cairns, Australia in 1997, LIK Fine Art sells Limited Edition photographic artwork through its 12 Galleries across the United States and on its online store.</p>
 
