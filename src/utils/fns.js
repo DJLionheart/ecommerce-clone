@@ -5,5 +5,13 @@ module.exports = {
         })
 
         return filteredList[0];
+    },
+
+    getGallery: (galleryList, match) => {
+        let galleryArr = galleryList.filter( gallery => {
+            return gallery.match === match;
+        })
+
+        return galleryArr[0];
     }
 }

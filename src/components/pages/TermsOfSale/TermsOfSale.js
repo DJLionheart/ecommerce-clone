@@ -3,7 +3,7 @@ import React from 'react';
 export default function TermsOfSale() {
     return(
         <main>
-            <h1>Privacy Policy</h1>
+            <h1>Terms Of Sale</h1>
         </main>
     )
 }

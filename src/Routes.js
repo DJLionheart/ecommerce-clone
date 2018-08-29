@@ -24,6 +24,7 @@ import TermsOfUse from './components/pages/TermsOfUse/TermsOfUse';
 import TermsOfSale from './components/pages/TermsOfSale/TermsOfSale';
 import Inspiration from './components/pages/Inspiration/Inspiration';
 import Process from './components/pages/Process/Process';
+import Careers from './components/pages/Careers/Careers';
 import Blog from './components/Blog/Blog';
 import BlogPost from './components/Blog/BlogPost/BlogPost';
 
@@ -51,6 +52,7 @@ function Routes(props) {
           <Route path="/pages/terms-of-sale" component={ TermsOfSale }/>
           <Route path="/pages/inspiration" component={ Inspiration }/>
           <Route path="/pages/process" component={ Process }/>
+          <Route path="/pages/careers" component={ Careers }/>
           <Route path="/blogs/journal" component={ Blog }/>
           <Route path="/blogs/journal/:postPath" component={ BlogPost }/>
           <Route path="/products/:productName" component={ ProductPage }/>
