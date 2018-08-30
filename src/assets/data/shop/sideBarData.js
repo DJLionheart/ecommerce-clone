@@ -1,5 +1,3 @@
-import collections from '../menu-links/'
-
 module.exports = {
     collections: [
         {name: 'New Releases', value: 'newRelease'},
@@ -40,7 +38,9 @@ module.exports = {
     ],
 
     format: [
-
+        {name: 'Panoramic', value: 'panoramic'},
+        {name: 'Square', value: 'square'},
+        {name: 'Standard', value: 'standard'},
     ],
 
     location: [
@@ -104,7 +104,7 @@ module.exports = {
         {name: 'Vertical', value: 'vert'},
     ],
 
-    productType: [
+    productTypes: [
         {name: 'Book', value: 'book'},
         {name: 'Element Frames', value: 'elementFrame'},
         {name: 'Element Pack', value: 'elementPack'},

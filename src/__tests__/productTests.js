@@ -1,6 +1,6 @@
 const fns = require('../utils/fns');
 
-const sampleData = require('../components/Shop/ProductPage/sampleProducts');
+const sampleData = require('../assets/data/shop/sampleProducts');
 
 test('getCurrentProduct should return an object', () => {
     let productTest1 = fns.getCurrentProduct(sampleData, 'aviator-b-w');

@@ -3,7 +3,7 @@ import LimitedHeader from './LimitedHeader/LimitedHeader';
 import FrameHeader from './FrameHeader/FrameHeader';
 import RegProductHeader from './RegProductHeader/RegProductHeader';
 
-import products from './sampleProducts';
+import products from '../../../assets/data/shop/sampleProducts';
 import { getCurrentProduct } from '../../../utils/fns';
 import ProductInfo from './ProductInfo/ProductInfo';
 import ProductPreview from './ProductPreview/ProductPreview';
