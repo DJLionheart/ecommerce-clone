@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 
+import SideBar from './SideBar/SideBar';
+import ProductCard from './ProductCard/ProductCard';
+
 class Shop extends Component {
     render() {
         return(
-            <div>
-                <h1>Shop</h1>
-            </div>
+            <main className="shop_page">
+                <SideBar/>
+                <section className="shop_products">
+
+                </section>
+            </main>
         )
     }
 }
